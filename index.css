@@ -33,7 +33,7 @@ body {
 main {
   height: 70vh;
   width: 700px;
-  background-color: #1f293A;
+  background-color: #1f293a;
   padding: 1em 1.3em;
 }
 
@@ -51,7 +51,6 @@ main {
   border: none;
 }
 
-
 /* Entire dropdown container */
 .custom-select {
   position: relative;
@@ -62,7 +61,7 @@ main {
 .select-selected {
   height: 43px;
   padding: 0 2.5em 0 0.7em;
-  background-color: #1f293A;
+  background-color: #1f293a;
   color: #d5d4d8;
   font-family: inherit;
   font-size: 1rem;
@@ -84,7 +83,7 @@ main {
 /* Style the items (options), including the selected item */
 .select-items {
   position: absolute;
-  background-color: #1f293A;
+  background-color: #1f293a;
   top: 100%;
   left: 0;
   right: 0;
@@ -112,7 +111,7 @@ main {
 }
 
 .select-items div:hover {
-  background-color: #3D4B60;
+  background-color: #3d4b60;
 }
 
 .select-items div .checkmark {
@@ -133,7 +132,7 @@ main {
   height: 43px;
   width: 25%;
   padding: 1em;
-  background-color: #3D4B60;
+  background-color: #3d4b60;
   color: white;
   font-family: inherit;
   font-size: 0.8rem;
@@ -165,12 +164,10 @@ main {
   text-align: center;
   color: #d5d4d8;
   font-size: 0.9rem;
-  background-color: #1f293A;
+  background-color: #1f293a;
   cursor: pointer;
 }
 
 .color-hex:hover {
   background-color: #2a3548;
 }
-
-

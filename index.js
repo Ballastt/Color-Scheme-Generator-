@@ -56,5 +56,8 @@ getSchemeBtn.addEventListener("click", () => {
         colorHexes[i].textContent = color.hex.value;
         colorDisplays[i].setAttribute("aria-label", `Color ${i + 1}: ${color.hex.value}`);
       });
+    })
+    .catch((error) => {
+      console.error("Error fetching colors:", error);
     });
 });

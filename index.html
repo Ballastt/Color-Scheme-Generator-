@@ -1,5 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Generate beautiful color schemes and palettes. Choose a seed color and select from various modes like monochrome, analogic, complement, and triad to create harmonious color combinations."
+    />
+    <title>Color Scheme Generator</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -10,22 +18,117 @@
   </head>
   <body>
     <main>
-        <div id="app">
-            <section class="header">
-                <input type="color" id="color-picker">
-                <select id="color-scheme">
-                    <option value="monochrome">Monochrome</option>
-                    <option value="monochrome-dark">Monochrome-dark</option>
-                    <option value="monochrome-light">Monochrome-light</option>
-                    <option value="analogic">Analogic</option>
-                    <option value="complement">Complement</option>
-                    <option value="analogic-complement">Analogic-complement</option>
-                    <option value="triad">Triad</option>
-                </select>
-                <button id="get-scheme">Get color scheme</button>
-            </section>
-            <section class="color-container"></section>
-        </div>
+      <div id="app">
+        <section class="header">
+          <label for="color-picker" class="visually-hidden"
+            >Select seed color</label
+          >
+          <input
+            type="color"
+            id="color-picker"
+            aria-label="Seed color picker"
+            value="#000000"
+          />
+          <div
+            class="custom-select"
+            id="color-scheme"
+            role="combobox"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-label="Color scheme selector"
+          >
+            <div class="select-selected" tabindex="0">Monochrome</div>
+            <div class="select-items select-hide" role="listbox">
+              <div
+                data-value="monochrome"
+                class="selected"
+                role="option"
+                tabindex="0"
+                aria-selected="true"
+              >
+                Monochrome<span class="checkmark" aria-hidden="true">✓</span>
+              </div>
+              <div
+                data-value="monochrome-dark"
+                role="option"
+                tabindex="0"
+                aria-selected="false"
+              >
+                Monochrome-dark<span class="checkmark" aria-hidden="true"
+                  >✓</span
+                >
+              </div>
+              <div
+                data-value="monochrome-light"
+                role="option"
+                tabindex="0"
+                aria-selected="false"
+              >
+                Monochrome-light<span class="checkmark" aria-hidden="true"
+                  >✓</span
+                >
+              </div>
+              <div
+                data-value="analogic"
+                role="option"
+                tabindex="0"
+                aria-selected="false"
+              >
+                Analogic<span class="checkmark" aria-hidden="true">✓</span>
+              </div>
+              <div
+                data-value="complement"
+                role="option"
+                tabindex="0"
+                aria-selected="false"
+              >
+                Complement<span class="checkmark" aria-hidden="true">✓</span>
+              </div>
+              <div
+                data-value="analogic-complement"
+                role="option"
+                tabindex="0"
+                aria-selected="false"
+              >
+                Analogic-complement<span class="checkmark" aria-hidden="true"
+                  >✓</span
+                >
+              </div>
+              <div
+                data-value="triad"
+                role="option"
+                tabindex="0"
+                aria-selected="false"
+              >
+                Triad<span class="checkmark" aria-hidden="true">✓</span>
+              </div>
+            </div>
+          </div>
+          <button id="get-scheme-btn">Get color scheme</button>
+        </section>
+        <section class="color-container" aria-label="Generated color scheme">
+          <div class="color-column">
+            <div class="color-display" role="img" aria-label="Color 1"></div>
+            <p class="color-hex" aria-live="polite"></p>
+          </div>
+          <div class="color-column">
+            <div class="color-display" role="img" aria-label="Color 2"></div>
+            <p class="color-hex" aria-live="polite"></p>
+          </div>
+          <div class="color-column">
+            <div class="color-display" role="img" aria-label="Color 3"></div>
+            <p class="color-hex" aria-live="polite"></p>
+          </div>
+          <div class="color-column">
+            <div class="color-display" role="img" aria-label="Color 4"></div>
+            <p class="color-hex" aria-live="polite"></p>
+          </div>
+          <div class="color-column">
+            <div class="color-display" role="img" aria-label="Color 5"></div>
+            <p class="color-hex" aria-live="polite"></p>
+          </div>
+        </section>
+      </div>
     </main>
     <script src="index.js"></script>
   </body>
